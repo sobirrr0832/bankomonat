@@ -1,17 +1,19 @@
-# Python 3.9 imidjidan foydalanamiz
 FROM python:3.9-slim
 
-# Ishchi katalogni yaratamiz
+# Ishchi direktoriyani o'rnatish
 WORKDIR /app
 
-# Talablar faylini konteynerga nusxalaymiz
-COPY requirements.txt /app/
+# Kerakli Python paketlarini o'rnatish uchun requirements.txt ni ko'chirish
+COPY requirements.txt .
 
-# Talablarni o'rnatamiz
+# Paketlarni o'rnatish
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Kodekni konteynerga nusxalaymiz
-COPY . /app/
+# Dastur fayllarini ko'chirish
+COPY . .
 
-# Asosiy skriptni ishga tushiramiz
-CMD ["python", "valyuta_omonat_bot.py"]
+# Portni ochish
+EXPOSE $PORT
+
+# Applicationni ishga tushirish
+CMD gunicorn --bind 0.0.0.0:$PORT main:app
