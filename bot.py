@@ -87,7 +87,7 @@ async def cancel(update: Update, context: ContextTypes.DEFAULT_TYPE):
     return ConversationHandler.END
 
 # Asosiy ishga tushirish
-app = ApplicationBuilder().token("YOUR_BOT_TOKEN_HERE").build()
+app = ApplicationBuilder().token("7992280278:AAHUVQmNfKc7s9Np-HstUiX6qTY44GXNJrQ").build()
 
 # Komandalar
 app.add_handler(CommandHandler("kurs", kurs))
