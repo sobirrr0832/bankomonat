@@ -1,1 +1,1 @@
-worker: python valyuta_omonat_bot.py
+web: gunicorn main:app
