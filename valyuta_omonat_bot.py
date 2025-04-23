@@ -122,7 +122,7 @@ async def cancel(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 # Asosiy ishga tushirish
 if __name__ == "__main__":
-    app = ApplicationBuilder().token("YOUR_ACTUAL_BOT_TOKEN").build()  # Tokenni o'zgartiring
+    app = ApplicationBuilder().token("7992280278:AAHUVQmNfKc7s9Np-HstUiX6qTY44GXNJrQ").build()  # Tokenni o'zgartiring
 
     # Komandalar
     app.add_handler(CommandHandler("kurs", kurs))
